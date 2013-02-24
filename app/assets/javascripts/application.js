@@ -14,6 +14,7 @@
 //= require jquery_ujs
 //= require jshashtable-2.1
 //= require bootstrap
+//= require jqfloat
 //= require bindings
 //= require parser
 //= require_tree .
