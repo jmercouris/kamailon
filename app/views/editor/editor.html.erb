@@ -1,0 +1,26 @@
+<div class="row-fluid">
+  <!-- Left hand Div-->
+  <div id="left" class="span6 well form-inline" >
+	<%counter = 0%>
+	<% @fields.each do |fld| %>
+	<div id="<%=counter%>" class="field-div <%='field-faded' if counter != 0%>">
+    		<input name="<%=fld.name%>" class="input" placeholder="<%=fld.name%>" type="text" id="<%=fld.name%>" value="" />
+			<input name="<%=fld.name%>_button" related_input="<%=fld.name%>" type="button" class="btn replacer_button" id="whatever" value="Submit"/>
+			<hr />
+			<%=fld.instructions%>
+		</div>
+		<br />
+			<% counter += 1 %>
+	<% end %>
+  </div>
+  <!-- Right hand Div-->
+  <div id="right" class="span6 well">
+	  
+    
+  </div>
+</div>
+<div id="TemplateLoader" style="display:none"></div>
+<script language="javascript" type="text/javascript">
+	loadTemplate('<%='/templates/' + @template_short_name + '.html'%>');
+</script>
+
