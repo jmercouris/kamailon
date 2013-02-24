@@ -1,12 +1,14 @@
 
         <div class="masthead">
           <ul class="nav nav-pills pull-right">
-            <li class="active"><a href="#">Home</a></li>
-			<li><a href="/editor">Send Mail</a></li>
-            <li><a href="/users">Users</a></li>
-            <li><a href="/email_templates">Templates</a></li>
-			<li><a href="/categories">Categories</a></li>
-			<li><a href="/fields">Fields</a></li>
+			  
+			  
+            <li ><a href="#">Home</a></li>
+			<li class="<%= 'active' if current_page?(editor_path) %>"><a href="/editor">Send Mail</a></li>
+            <li class="<%= 'active' if current_page?(users_path) %>"><a href="/users">Users</a></li>
+            <li class="<%= 'active' if current_page?(email_templates_path) %>"><a href="/email_templates">Templates</a></li>
+			<li class="<%= 'active' if current_page?(categories_path) %>"><a href="/categories">Categories</a></li>
+			<li class="<%= 'active' if current_page?(fields_path) %>"><a href="/fields">Fields</a></li>
 			<li><a href="#">About</a></li>
             <li><a href="#">Contact </a></li>
           </ul>
